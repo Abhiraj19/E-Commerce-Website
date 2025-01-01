@@ -1,0 +1,144 @@
+
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #4CAF50;
+    color: white;
+    padding: 10px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Product Page Styles */
+#product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.product {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    transition: box-shadow 0.3s;
+}
+
+.product img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.product h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.product p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.product button {
+    margin-top: 10px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product button:hover {
+    background: #388E3C;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    background: #333;
+    color: white;
+}
+
+/* Media Queries */
+
+/* Tablets */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav a {
+        margin: 5px 0;
+    }
+
+    #product-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .product img {
+        height: 120px;
+    }
+
+    .product h3 {
+        font-size: 1rem;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header nav a {
+        margin: 5px;
+        font-size: 0.9rem;
+    }
+
+    #product-container {
+        grid-template-columns: 1fr;
+    }
+
+    .product img {
+        height: 100px;
+    }
+
+    .product h3 {
+        font-size: 0.9rem;
+    }
+
+    .product button {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+}

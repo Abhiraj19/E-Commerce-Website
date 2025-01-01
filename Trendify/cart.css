@@ -1,0 +1,161 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #4CAF50;
+    color: white;
+    padding: 10px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Cart Container */
+#cart-container {
+    padding: 20px 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: box-shadow 0.3s;
+}
+
+.cart-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.cart-item h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    flex-grow: 1;
+}
+
+.cart-item p {
+    margin: 0;
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Cart Summary */
+#cart-summary {
+    margin-top: 20px;
+    padding: 15px;
+    border-top: 2px solid #4CAF50;
+    text-align: right;
+}
+
+#cart-summary p, #cart-summary h3 {
+    margin: 5px 0;
+    font-size: 1.1rem;
+}
+
+#cart-summary h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    background: #333;
+    color: white;
+}
+
+/* Media Queries */
+
+/* Tablets */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav a {
+        margin: 5px 0;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cart-item img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .cart-item h3 {
+        font-size: 1rem;
+    }
+
+    .cart-item p {
+        font-size: 0.9rem;
+    }
+
+    #cart-summary {
+        text-align: center;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header nav a {
+        margin: 5px;
+        font-size: 0.9rem;
+    }
+
+    .cart-item img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .cart-item h3 {
+        font-size: 0.9rem;
+    }
+
+    .cart-item p {
+        font-size: 0.8rem;
+    }
+
+    #cart-summary p, #cart-summary h3 {
+        font-size: 1rem;
+    }
+}
